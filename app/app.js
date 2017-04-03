@@ -7,6 +7,6 @@ angular
   $locationProvider.hashPrefix('!');
 
   $routeProvider
-      .when('/bilder',{templateUrl:"/BalticGaming/app/bilder.html"})
+      .when('/bilder',{templateUrl:"/BalticGaming/app/games.html"})
       .when('/impressum',{templateUrl:"/BalticGaming/app/impressum.html"});
   }]);
