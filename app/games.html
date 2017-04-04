@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp" lang="en" xmlns:gb="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Bilder</title>
@@ -16,10 +16,13 @@
 <button type="button" class="btn btn-primary">Create A Thread</button>
 
 <div class="list-group">
-    <a href="#" class="list-group-item">First item</a>
-    <a href="#" class="list-group-item">Second item</a>
-    <a href="#" class="list-group-item">Third item</a>
+    <div class="container " ng-controller="EntryCtrl">
+        <div class="row well">
+            <div gb:Game="{{game}}" ng-repeat="game in games"></div></div>
+    </div>
 </div>
+
+
 
 </body>
 </html>
