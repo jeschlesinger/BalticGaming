@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" xmlns:gb="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilder</title>
+</head>
+<body>
+<div class = "page-header">
+
+    <h1>
+        Erstelle eine Spielevorstellung
+    </h1>
+
+</div>
+
+    <a onclick="insertAtCaret('textareaid', '<img></img>');return false;" class="btn btn-info" role="button">Bild einfügen</a>
+    <a onclick="insertAtCaret('textareaid', 'text to insert');return false;" class="btn btn-info" role="button">Spoiler einfügen</a>
+    <a onclick="insertAtCaret('textareaid', '<br/><br/>');return false;" class="btn btn-info" role="button">Absatz einfügen</a>
+
+<br/><br/>
+
+
+<form method="POST" action="" id="entryForm" onSubmit="ajaxSubmit(this); return false;">
+<div class="col-md-8">
+<div class="form-group">
+    <textarea id="textareaid" class="form-control" rows="18" id="comment"></textarea>
+</div>
+</div>
+
+    <button type="submit" class="btn btn-success">
+        <span class="glyphicon glyphicon-ok"></span>
+        Abschicken
+    </button>
+</form>
+
+
+</body>
+</html>
