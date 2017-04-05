@@ -4,10 +4,35 @@ var app = angular
   'ngRoute'
   ])
     .controller(
-        'GamesCtrl',
+        'HomeCtrl',
         function($scope, $location, $http) {
-            $scope.games = [{"id": 0,"name": "Path of Exile", "pagename": "poe"},{"id": 1,"name": "data", "pagename": "test"}];
+            $scope.games = [{"name": "Path of Exile"},{"name": "data"}];
+            console.log("alert")
+
         }
+
+
+    ).controller(
+        'ThreadCtrl',
+        function($scope, $location, $http) {
+            $http.get('data/gamethreads.json').then(function(response){
+                $scope.games=response.data;
+            });
+        }
+
+
+    ).controller(
+        'CreateThreadCtrl',
+        function($scope, $location, $http) {
+            $scope.myFunc = function() {
+                console.log()
+                $http.get('http://localhost:3000/postThread/'+$scope.name).then(function(response){
+                    console.log(response.data);
+                });
+
+            }
+        }
+
 
     )
     .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

@@ -22,17 +22,18 @@
 <div class="col-md-8">
     <div class="form-group">
         <label for="name">Name des Spiels:</label>
-        <input type="name" class="form-control" id="name">
+        <input ng-model="name" type="name" class="form-control" id="name">
     </div>
 </div>
 <div class="col-md-8">
-    <textarea id="textareaid" class="form-control" rows="10" id="comment"></textarea>
+    <textarea ng-model="textareaid" class="form-control" rows="10"></textarea>
 </div>
-
-<button type="submit" class="btn btn-success">
-    <span class="glyphicon glyphicon-ok"></span>
-    Abschicken
-</button>
+<div ng-controller="CreateThreadCtrl">
+    <button ng-click="myFunc()" class="btn btn-success">
+        <span class="glyphicon glyphicon-ok"></span>
+        Abschicken
+    </button>
+</div>
 </form>
 
 

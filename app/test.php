@@ -1,5 +1,5 @@
 <?php
-$filename = "gb_content.txt";
+$filename = "/Balticgaming/app/gamethreads.json";
 fopen($filename, "c+");
 
 if (!empty($_POST)) {
