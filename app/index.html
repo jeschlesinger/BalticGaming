@@ -35,9 +35,38 @@
 </html>
 
 <!--
-http://stackoverflow.com/questions/26386470/generate-html-string-from-angularjs-template-string
-Brauche eine Seite zum erstellen der Threads
-Daraus muss ein html file generiert werden
-für eine Spiele Spielvorstellung dann wieder eine ngview
-dort wird die generierte html reingeladen
+
+Eine StandardSeite(Also eine Art Template für eine Threadseite) wo dann einmal eine Spielebeschreibung und ein Bild reingeladen wird.
+Bildlink und Text können zur laufzeit gespeichert werden
+ich benötige ein spezielles json format damit alles ordentlich aufgeteilt wird und beim laden der Seite dann aufgerufen werden kann
+{
+  "games": [
+    {
+      "img": "link",
+      "name": "poe"
+    },
+    {
+      "img": "link",
+      "name": "poe"
+    }
+  ]
+}
+
+oder!
+
+[
+  {
+    "name": "poe"
+  },
+  {
+    "name": "rl"
+  }
+]
+
+
+-->
+<!--
+$http.get('data/gamethreads.json').then(function(response){
+                $scope.games=response.data;
+
 -->

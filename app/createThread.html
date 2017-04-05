@@ -5,7 +5,7 @@
     <title>Bilder</title>
 </head>
 <body>
-<div class = "page-header">
+<div class="page-header">
 
     <h1>
         Erstelle eine Spielevorstellung
@@ -13,24 +13,26 @@
 
 </div>
 
-    <a onclick="insertAtCaret('textareaid', '<img></img>');return false;" class="btn btn-info" role="button">Bild einfügen</a>
-    <a onclick="insertAtCaret('textareaid', 'text to insert');return false;" class="btn btn-info" role="button">Spoiler einfügen</a>
-    <a onclick="insertAtCaret('textareaid', '<br/><br/>');return false;" class="btn btn-info" role="button">Absatz einfügen</a>
-
-<br/><br/>
-
-
-<form method="POST" action="" id="entryForm" onSubmit="ajaxSubmit(this); return false;">
 <div class="col-md-8">
-<div class="form-group">
-    <textarea id="textareaid" class="form-control" rows="18" id="comment"></textarea>
+    <div class="form-group">
+        <label for="imgurl">BildURL:</label>
+        <input type="link" class="form-control" id="imgurl">
+    </div>
 </div>
+<div class="col-md-8">
+    <div class="form-group">
+        <label for="name">Name des Spiels:</label>
+        <input type="name" class="form-control" id="name">
+    </div>
+</div>
+<div class="col-md-8">
+    <textarea id="textareaid" class="form-control" rows="10" id="comment"></textarea>
 </div>
 
-    <button type="submit" class="btn btn-success">
-        <span class="glyphicon glyphicon-ok"></span>
-        Abschicken
-    </button>
+<button type="submit" class="btn btn-success">
+    <span class="glyphicon glyphicon-ok"></span>
+    Abschicken
+</button>
 </form>
 
 
