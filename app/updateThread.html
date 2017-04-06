@@ -17,7 +17,7 @@
     <div class="container">
         <div class="col-md-5">
             <div class="row">
-              <h2>Eingabe</h2>
+                <h2>Eingabe</h2>
             </div>
             <div class="row">
                 <div class="form-group">
@@ -38,14 +38,19 @@
                     <textarea ng-model="textareaid" class="form-control" rows="10"></textarea>
                 </div>
             </div>
-
+            <div class="row">
+                <a href="#!/bilder" ng-click="update()" class="btn btn-info center block" role="button">Aktualisieren</a>
+                <div class="col-md-1"></div>
+                <a href="#!/bilder" ng-click="delete()" class="btn btn-info center block" role="button">Löschen</a>
+            </div>
         </div>
         <div class="col-md-2">
 
         </div>
-        <div class="col-md-5"><div class="row">
-            <h2>Preview</h2>
-        </div>
+        <div class="col-md-5">
+            <div class="row">
+                <h2>Preview</h2>
+            </div>
             <div class="row">
                 <div class="form-group">
                     <h3>{{name}}</h3>
@@ -60,8 +65,8 @@
             <div class="row">
                 <div class="form-group">
                     <div>
-                    {{textareaid}}
-                </div>
+                        {{textareaid}}
+                    </div>
                 </div>
             </div>
 
