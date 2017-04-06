@@ -5,23 +5,26 @@
     <title>Bilder</title>
 </head>
 <body>
-<div class = "page-header">
+<div class="page-header">
 
-    <h1>
+    <h1 class="text-center">
         Spielevorstellungen
     </h1>
 
 </div>
 
 
-<a href="#!/createthread" class="btn btn-info" role="button">Create a Thread</a>
+<div class="text-center">
+    <a href="#!/createthread" class="btn btn-info center block" role="button">Create a Thread</a>
+</div>
 
 <br/><br/>
 
 <div class="list-group">
     <div class="container " ng-controller="ThreadCtrl">
         <div class="row well">
-            <div ng-click="editItem(game);" gb:Game="{{game}}" ng-repeat="game in games"></div></div>
+            <div ng-click="editItem(game);" gb:Game="{{game}}" ng-repeat="game in games"></div>
+        </div>
     </div>
 </div>
 

@@ -5,24 +5,38 @@
     <title>Title</title>
 </head>
 <body>
-<div class="container" ng-controller="InnerThreadCtrl">
-    <br />
-    <br />
-    <div class="page-header">
+<div class="jumbotron">
+    <div class="container" ng-controller="InnerThreadCtrl">
+        <br/>
+        <br/>
 
-        <h1>
-            {{gamename}}
-        </h1>
+        <div class="row">
+            <div class="page-header">
+                <h1>
+                    {{gamename}}
+                </h1>
+            </div>
 
+        </div>
+        <div class="row">
+            <img src="{{gameimg}}" width="888" height="500">
+            <br/>
+            <br/>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                {{gamedescr}}
+            </div>
+
+        </div>
+        <div class="row">
+            <br/>
+            <a href="#!/updatethread" class="btn btn-info center block" role="button">Bearbeiten</a>
+
+        </div>
     </div>
 
-    <img src="{{gameimg}}" width="888" height="500">
-    <br />
-    <br />
-        <div class="col-md-8">
-            {{gamedescr}}
-        </div>
 </div>
-
 </body>
 </html>
