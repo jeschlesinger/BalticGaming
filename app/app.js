@@ -1,4 +1,7 @@
 // Declare app level module which depends on views, and components
+var gamnamehelper="";
+var descriptionhelper="";
+var imglinkhelper="";
 var app = angular
     .module('myApp', [
   'ngRoute'
@@ -18,6 +21,11 @@ var app = angular
             $http.get('data/gamethreads.json').then(function(response){
                 $scope.games=response.data;
             });
+            $scope.editItem = function(game){
+                gamenamehelper=game.name;
+                descriptionhelper=game.description;
+                imglinkhelper=game.img;
+            }
         }
 
 
@@ -34,6 +42,15 @@ var app = angular
         }
 
 
+    ).controller(
+        'InnerThreadCtrl',
+        function($scope, $location, $http) {
+            $scope.gamename=gamenamehelper;
+            $scope.gamedescr=descriptionhelper;
+            $scope.gameimg=imglinkhelper;
+        }
+
+
     )
     .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
@@ -41,7 +58,8 @@ var app = angular
   $routeProvider
       .when('/bilder',{templateUrl:"/BalticGaming/app/games.html"})
       .when('/impressum',{templateUrl:"/BalticGaming/app/impressum.html"})
-      .when('/createthread',{templateUrl:"/BalticGaming/app/createthread.html"});
+      .when('/createthread',{templateUrl:"/BalticGaming/app/createthread.html"})
+      .when('/thread',{templateUrl:"/BalticGaming/app/thread.html"});
   }]);
 
 

@@ -21,7 +21,7 @@
 <div class="list-group">
     <div class="container " ng-controller="ThreadCtrl">
         <div class="row well">
-            <div gb:Game="{{game}}" ng-repeat="game in games"></div></div>
+            <div ng-click="editItem(game);" gb:Game="{{game}}" ng-repeat="game in games"></div></div>
     </div>
 </div>
 
