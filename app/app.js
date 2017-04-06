@@ -56,6 +56,7 @@ var app = angular
 
         $routeProvider
             .when('/bilder', {templateUrl: "/BalticGaming/app/games.html"})
+            .when('/', {templateUrl: "/BalticGaming/app/firstpage.html"})
             .when('/impressum', {templateUrl: "/BalticGaming/app/impressum.html"})
             .when('/createthread', {templateUrl: "/BalticGaming/app/createthread.html"})
             .when('/thread', {templateUrl: "/BalticGaming/app/thread.html"})
